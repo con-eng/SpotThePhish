@@ -1,0 +1,255 @@
+
+{
+  "scenarios": [
+    {
+      "id": "email_001",
+      "category": "Email Scams",
+      "from": "delivery@fedex-tracking.net",
+      "subject": "Your Package Could Not Be Delivered — Action Required",
+      "body": "Dear Customer,\n\nWe attempted to deliver your package today but were unable to complete delivery.\n\nPackage ID: FX-293847162\nStatus: Held at facility\n\nTo reschedule, please pay the outstanding customs fee of $3.50:\n\nPay Now → http://fedex-tracking.net/pay\n\nYour package will be returned to sender if not claimed within 48 hours.\n\nFedEx Support",
+      "isPhishing": true,
+      "explanation": "This is phishing. FedEx's real domain is fedex.com, not fedex-tracking.net. FedEx does not charge customers customs fees via a payment link in an email. The small $3.50 fee is designed to seem harmless so you enter your card details without thinking.",
+      "redFlags": ["Fake domain (fedex-tracking.net)", "Small fee designed to seem harmless", "48-hour threat to create urgency", "Real FedEx never requests payment via email links"]
+    },
+    {
+      "id": "email_002",
+      "category": "Email Scams",
+      "from": "no-reply@accounts.google.com",
+      "subject": "Security alert: New sign-in on Windows",
+      "body": "Your Google Account\n\nA new sign-in to your Google Account was just detected.\n\nWhen: June 14, 2026, 2:14 PM GMT\nDevice: Windows PC\nLocation: Chicago, Illinois\n\nIf this was you, no action is needed.\n\nIf you don't recognize this, review your account activity at myaccount.google.com/security.\n\nThe Google Accounts Team",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Google security alert. The sender is @accounts.google.com, which is a real Google domain. The email contains no suspicious links — it directs you to myaccount.google.com. There is no urgency, no threats, and no request to click an unknown link.",
+      "redFlags": []
+    },
+    {
+      "id": "email_003",
+      "category": "Email Scams",
+      "from": "rewards@amazon-shipping-rewards.com",
+      "subject": "Congratulations! You're our 1 millionth customer — Claim your free MacBook",
+      "body": "CONGRATULATIONS!\n\nYou were just selected as our 1,000,000th customer of the month and have been chosen to receive a brand new MacBook Pro M4 worth $2,499.\n\nTo claim your free MacBook, confirm your shipping address and pay only the $9.95 shipping fee:\n\nClaim MacBook → http://amazon-shipping-rewards.com/claim\n\nThis offer expires in 24 hours.\n\nAmazon Rewards Team",
+      "isPhishing": true,
+      "explanation": "This is a classic prize scam. Amazon's real domain is amazon.com, not amazon-shipping-rewards.com. Amazon does not run customer milestone giveaways like this. Any 'free' prize that requires you to pay shipping or a small fee is a scam — once you enter your card details, attackers steal them.",
+      "redFlags": ["Fake domain (amazon-shipping-rewards.com)", "Unsolicited 'prize' you never entered to receive", "Small fee required to claim 'free' item", "24-hour deadline pressure", "Real companies don't ask for shipping fees on giveaways"]
+    },
+    {
+      "id": "email_004",
+      "category": "Email Scams",
+      "from": "noreply@dropbox.com",
+      "subject": "Alex shared a folder with you",
+      "body": "Hi,\n\nAlex Johnson shared a folder with you on Dropbox.\n\nProject Files — Summer 2026\n\nOpen Folder → dropbox.com/sh/abc123xyz\n\nDropbox",
+      "isPhishing": false,
+      "explanation": "This looks like a legitimate Dropbox sharing notification. The sender is @dropbox.com (the real domain) and the link goes to dropbox.com. Dropbox regularly sends notifications when someone shares files. Always hover over links to confirm they go to the real domain before clicking.",
+      "redFlags": []
+    },
+    {
+      "id": "email_005",
+      "category": "Email Scams",
+      "from": "hr@your-company-payroll.com",
+      "subject": "Action Required: Update Your Direct Deposit by Friday",
+      "body": "Dear Employee,\n\nOur payroll system is being upgraded. All employees must update their direct deposit information before Friday to avoid a delay in payment.\n\nPlease complete the update form here:\nhttps://your-company-payroll.com/update-banking\n\nYou will need your bank account number and routing number.\n\nHR Department",
+      "isPhishing": true,
+      "explanation": "This is phishing. Your real HR team would never ask you to update banking information through an external link to a generic domain like 'your-company-payroll.com'. This attack redirects your paycheck to the attacker's account. Always verify payroll changes by contacting HR directly through your company's internal systems.",
+      "redFlags": ["Non-company domain (your-company-payroll.com)", "Requests bank account and routing numbers via a link", "Friday deadline creates urgency", "Payroll changes should go through official internal systems only"]
+    },
+    {
+      "id": "email_006",
+      "category": "Email Scams",
+      "from": "auto-confirm@amaz0n-orders.com",
+      "subject": "Order Confirmation: Apple iPad Pro $1,299.00",
+      "body": "Thank you for your order!\n\nOrder #114-9482711-3829\nApple iPad Pro 12.9\" — $1,299.00\nShipping to: 482 Oak Lane\n\nIf you did NOT place this order, cancel immediately:\n\nCANCEL ORDER → http://amaz0n-orders.com/cancel\n\nOrder ships in 2 hours.\n\nAmazon",
+      "isPhishing": true,
+      "explanation": "This is phishing. Look carefully — the domain is amaz0n-orders.com with a zero instead of an 'o'. The scam uses a fake expensive order to panic you into clicking the 'cancel' link, which leads to a fake login page. Real Amazon orders can always be reviewed at amazon.com/orders.",
+      "redFlags": ["Spoofed domain: amaz0n-orders.com (zero, not 'o')", "Large fake order to cause panic", "Suspicious cancel link", "Real Amazon never threatens shipping deadlines this way"]
+    },
+    {
+      "id": "email_007",
+      "category": "Email Scams",
+      "from": "calendar-notification@google.com",
+      "subject": "Invitation: Team Standup @ Wed Jun 17, 2026 10am - 10:30am",
+      "body": "You have been invited to the following event:\n\nTeam Standup\nWednesday, June 17, 2026 · 10:00am – 10:30am EST\n\nOrganizer: priya.shah@company.com\nLocation: Google Meet (link in event)\n\nYes / Maybe / No — respond in Google Calendar.\n\nGoogle Calendar",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Google Calendar invitation. The sender is @google.com, the format matches real Google Calendar invites, and the organizer is your coworker's actual address. No suspicious links and no requests for credentials.",
+      "redFlags": []
+    },
+    {
+      "id": "email_008",
+      "category": "Email Scams",
+      "from": "billing@netflix-account-services.com",
+      "subject": "Netflix: We couldn't process your payment",
+      "body": "Hi,\n\nWe were unable to validate your billing information for your Netflix subscription.\n\nYour account will be paused unless we receive updated payment details:\n\nUpdate Payment → http://netflix-account-services.com/update\n\nIf you do not update within 48 hours, your subscription will be canceled.\n\nNetflix Member Services",
+      "isPhishing": true,
+      "explanation": "This is phishing. Netflix's real domain is netflix.com, not netflix-account-services.com. Real Netflix billing issues are also handled by signing into netflix.com directly, never through an external link in an email.",
+      "redFlags": ["Fake domain (netflix-account-services.com)", "48-hour cancellation threat", "Payment update via external link", "Uses fear of losing service to rush you"]
+    },
+    {
+      "id": "email_009",
+      "category": "Email Scams",
+      "from": "appleid@apple-id-support.com",
+      "subject": "Your Apple ID has been locked for security reasons",
+      "body": "Dear Customer,\n\nYour Apple ID has been locked because we detected unusual activity.\n\nFor your security, please confirm your identity within 24 hours:\n\nUnlock Apple ID → http://apple-id-support.com/unlock\n\nIf you do not respond, your Apple ID will be permanently disabled and all iCloud data will be deleted.\n\nApple Support",
+      "isPhishing": true,
+      "explanation": "This is phishing. Apple's real domain is apple.com, not apple-id-support.com. Apple does not threaten to delete your iCloud data over a locked account. Real Apple ID recovery happens at appleid.apple.com or in the Settings app on your device.",
+      "redFlags": ["Fake domain (apple-id-support.com)", "Threats to delete iCloud data", "Generic greeting", "24-hour deadline"]
+    },
+    {
+      "id": "email_010",
+      "category": "Email Scams",
+      "from": "noreply@github.com",
+      "subject": "[org/repo] @priya-s requested your review on PR #482",
+      "body": "Hi,\n\n@priya-s requested your review on Pull Request #482:\n\n'Refactor payment retry logic'\n\nView Pull Request: https://github.com/org/repo/pull/482\n\nYou can also reply to this email directly to comment on the PR.\n\n— GitHub",
+      "isPhishing": false,
+      "explanation": "This is a legitimate GitHub notification. The sender is @github.com (the real domain), the link goes to github.com, and the format matches GitHub's standard review-request email. GitHub regularly sends notifications like this.",
+      "redFlags": []
+    },
+    {
+      "id": "email_011",
+      "category": "Email Scams",
+      "from": "share@secure-document-share.com",
+      "subject": "Invoice_June_2026.pdf has been shared with you",
+      "body": "A document has been shared with you.\n\nDocument: Invoice_June_2026.pdf\nFrom: accounting@yourcompany.com\n\nView Document → http://secure-document-share.com/view\n\nPassword: 2026Invoice (case sensitive)\n\nThis document is encrypted for your security.\n\nSecure Document Share",
+      "isPhishing": true,
+      "explanation": "This is phishing. The 'encrypted document with password' pattern is a common phishing technique — the password makes it seem secure but actually tricks you into entering credentials on a fake login page. Real document sharing happens through services your company has approved, not random domains.",
+      "redFlags": ["Unfamiliar document-share domain", "Password in the same email (defeats the security claim)", "Generic invoice topic to entice business users", "Spoofed-looking internal sender"]
+    },
+    {
+      "id": "email_012",
+      "category": "Email Scams",
+      "from": "voicemail@voip-message-service.net",
+      "subject": "You have a new voicemail (00:42)",
+      "body": "You have received a new voicemail.\n\nFrom: +1 (415) 555-0182\nDuration: 00:42\nReceived: June 14, 2026 at 9:14 AM\n\nListen → http://voip-message-service.net/play\n\nVoIP Message Service",
+      "isPhishing": true,
+      "explanation": "This is phishing. Unsolicited 'voicemail' emails from unknown VoIP services are a common phishing lure — the link leads to a malware download or fake login page. If you use a real voicemail-to-email service, you'd already recognize the sender.",
+      "redFlags": ["Unfamiliar service domain", "Unsolicited voicemail email", "Suspicious 'Listen' link", "Curiosity-driven lure"]
+    },
+    {
+      "id": "email_013",
+      "category": "Email Scams",
+      "from": "no-reply@spotify.com",
+      "subject": "Your Discover Weekly is ready 🎵",
+      "body": "Hi,\n\nYour new Discover Weekly playlist is here, with 30 songs picked just for you.\n\nListen now in the Spotify app.\n\nNot in the mood? You can change your weekly email preferences in Account → Notifications.\n\n— Spotify",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Spotify notification. The sender is @spotify.com (the real domain), the message contains no clickable suspicious links, and it directs you to use the Spotify app you already have installed.",
+      "redFlags": []
+    },
+    {
+      "id": "email_014",
+      "category": "Email Scams",
+      "from": "notification@linkedln.com",
+      "subject": "Marcus Chen wants to add you on LinkedIn",
+      "body": "Hi,\n\nMarcus Chen, Senior Recruiter at Meta, wants to connect with you on LinkedIn.\n\nAccept Invitation → http://linkedln.com/accept/8472\n\nYou have 7 days to respond before this invitation expires.\n\nLinkedIn",
+      "isPhishing": true,
+      "explanation": "Look closely — the domain is linkedln.com, not linkedin.com. The 'i' has been replaced with an 'l'. Real LinkedIn invitations are visible in the app or at linkedin.com, and they don't 'expire' in a way that requires email-link action.",
+      "redFlags": ["Spoofed domain: linkedln (not linkedin)", "Big-name company in invitation as bait", "Expiration pressure", "Real LinkedIn invitations are managed in the app"]
+    },
+    {
+      "id": "email_015",
+      "category": "Email Scams",
+      "from": "renewal@nortonantivirus-billing.com",
+      "subject": "Norton: Your subscription will auto-renew tomorrow for $399.99",
+      "body": "Dear Customer,\n\nYour Norton 360 subscription will automatically renew tomorrow for $399.99.\n\nIf you did not authorize this renewal, call our billing department immediately:\n\n+1 (888) 555-0114\n\nOr cancel online: http://nortonantivirus-billing.com/cancel\n\nNorton Billing",
+      "isPhishing": true,
+      "explanation": "This is a classic 'fake invoice' scam. Norton's real domain is norton.com. The inflated price ($399.99 — much more than real Norton) is meant to alarm you into calling. The phone number connects you to scammers who use remote-access tools to steal data or pressure 'refunds'.",
+      "redFlags": ["Fake domain (nortonantivirus-billing.com)", "Inflated price to cause panic", "Pressure to call a phone number", "Classic 'refund call-back' scam pattern"]
+    },
+    {
+      "id": "email_016",
+      "category": "Email Scams",
+      "from": "auto-confirm@amazon.com",
+      "subject": "Your Amazon.com order of 'AirPods Pro' has shipped",
+      "body": "Hello,\n\nYour Amazon.com order has shipped.\n\nApple AirPods Pro (2nd generation) — $249.00\n\nArriving: Tuesday, June 16\n\nTrack at amazon.com/orders\n\nAmazon.com",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Amazon shipping confirmation. The sender is @amazon.com (the real domain), the item matches a recent order, and it directs you to amazon.com/orders without any urgent action or external link.",
+      "redFlags": []
+    },
+    {
+      "id": "email_017",
+      "category": "Email Scams",
+      "from": "dse@docusign-esign.net",
+      "subject": "Please DocuSign: 2026_Q2_Contract.pdf",
+      "body": "You have a document to review and sign.\n\nFrom: legal@partner-firm.com\nDocument: 2026_Q2_Contract.pdf\n\nReview Document → http://docusign-esign.net/review\n\nThis document expires in 7 days.\n\nDocuSign",
+      "isPhishing": true,
+      "explanation": "This is phishing. DocuSign's real domain is docusign.net or docusign.com — note the legitimate one would be docusign.net itself, not docusign-esign.net. Attackers commonly impersonate DocuSign because business users routinely sign documents this way. Always verify the sender domain carefully.",
+      "redFlags": ["Look-alike domain (docusign-esign.net)", "Generic 'contract' as bait", "Suspicious external review link", "Real DocuSign emails come from docusign.net"]
+    },
+    {
+      "id": "email_018",
+      "category": "Email Scams",
+      "from": "efax@efax-online-service.com",
+      "subject": "You have received a 2-page fax",
+      "body": "A new fax has been received in your inbox.\n\nFrom: +1 (212) 555-0119\nPages: 2\nReceived: June 14, 2026 at 11:42 AM\n\nView Fax → http://efax-online-service.com/view\n\neFax Online Service",
+      "isPhishing": true,
+      "explanation": "This is phishing. Unsolicited 'fax received' emails from unfamiliar services are a phishing lure — the link leads to malware or a credential-stealing page. If you use a real fax service, you'd recognize its actual domain.",
+      "redFlags": ["Unfamiliar fax service domain", "Unsolicited 'fax received' notice", "Suspicious 'view' link", "Curiosity-driven lure"]
+    },
+    {
+      "id": "email_019",
+      "category": "Email Scams",
+      "from": "notify@slack.com",
+      "subject": "@jordan-w sent you a message in #design-reviews",
+      "body": "@jordan-w:\n\n'Hey, can you take a look at the new home screen mocks before the meeting?'\n\nReply in Slack → slack.com\n\nYou are receiving this because you are not currently active in Slack.\n\nSlack",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Slack notification. The sender is @slack.com (the real domain), the format matches Slack's mention notifications, and the link goes to slack.com. Slack sends emails like this when you're not active and someone mentions you.",
+      "redFlags": []
+    },
+    {
+      "id": "email_020",
+      "category": "Email Scams",
+      "from": "tracking@dhl-express-delivery.com",
+      "subject": "DHL: We attempted to deliver your parcel today",
+      "body": "Dear Customer,\n\nWe attempted to deliver your parcel today (Tracking #DHL-7281-9382) but no one was present.\n\nA redelivery fee of $2.99 is required:\n\nPay & Reschedule → http://dhl-express-delivery.com/redeliver\n\nUnclaimed parcels are returned after 5 days.\n\nDHL Customer Service",
+      "isPhishing": true,
+      "explanation": "This is phishing. DHL's real domain is dhl.com, not dhl-express-delivery.com. DHL does not charge customers small 'redelivery fees' through email payment links — they reattempt delivery automatically or leave a card. The tiny fee is designed to bypass your suspicion so you enter card details.",
+      "redFlags": ["Fake domain (dhl-express-delivery.com)", "Small fee to seem harmless", "Suspicious payment link", "5-day deadline pressure"]
+    },
+    {
+      "id": "email_021",
+      "category": "Email Scams",
+      "from": "refunds@telecom-services-billing.com",
+      "subject": "Final notice: Your $1,247 refund expires soon",
+      "body": "Dear Former Customer,\n\nOur records show you are owed a refund of $1,247.86 from your old internet service account.\n\nTo claim this refund, please confirm your identity and bank account details:\n\nClaim Refund → http://telecom-services-billing.com/refund\n\nA small administrative fee of $35 is required to process the wire transfer.\n\nUnclaimed refunds are returned to the state treasury after 14 days.\n\nTelecom Refund Department",
+      "isPhishing": true,
+      "explanation": "This is a refund scam. Legitimate companies never ask you to pay a fee to receive a refund — refunds are returned through the original payment method. The vague 'old internet account' lacks specifics on purpose so it could apply to anyone. The goal is to steal both your bank details and the $35 fee.",
+      "redFlags": ["Pay fee to receive refund (always a scam)", "Vague 'old account' without specifics", "Unknown billing domain", "14-day deadline pressure", "Asks for bank account details via external link"]
+    },
+    {
+      "id": "email_022",
+      "category": "Email Scams",
+      "from": "newsletter@theverge.com",
+      "subject": "Welcome to The Verge — confirm your subscription",
+      "body": "Hi,\n\nThanks for subscribing to The Verge daily newsletter!\n\nClick below to confirm your email and start receiving your daily digest:\n\nConfirm Subscription → theverge.com/confirm/8472921\n\nIf you didn't subscribe, you can ignore this email.\n\n— The Verge",
+      "isPhishing": false,
+      "explanation": "This is a legitimate newsletter subscription confirmation. The sender is @theverge.com (the real domain), the link goes to theverge.com, and the language is normal and non-urgent. Newsletters routinely send confirmation emails like this to prevent spam signups.",
+      "redFlags": []
+    },
+    {
+      "id": "email_023",
+      "category": "Email Scams",
+      "from": "postmaster@office365-mailservices.com",
+      "subject": "Your mailbox is 98% full — Messages will bounce",
+      "body": "Dear User,\n\nYour Office 365 mailbox is 98% full. Incoming messages will start bouncing in 24 hours.\n\nUpgrade storage now (free):\n\nUpgrade Storage → http://office365-mailservices.com/upgrade\n\nYou will be asked to verify your Microsoft 365 credentials.\n\nOffice 365 Administrator",
+      "isPhishing": true,
+      "explanation": "This is phishing. Microsoft's real domains are microsoft.com or office.com — not office365-mailservices.com. Real mailbox-full warnings come through Outlook itself, not external links. The 'upgrade' page is a fake login designed to steal Microsoft 365 credentials.",
+      "redFlags": ["Fake domain (office365-mailservices.com)", "Asks for Microsoft credentials", "24-hour deadline pressure", "Real Microsoft warnings appear inside Outlook"]
+    },
+    {
+      "id": "email_024",
+      "category": "Email Scams",
+      "from": "icloud-billing@icloud-support-center.com",
+      "subject": "iCloud Storage Full — Action Required",
+      "body": "Hi,\n\nYour iCloud storage is full. To continue receiving photos and backups, please add a payment method or your data may be lost.\n\nUpdate Payment → http://icloud-support-center.com/billing\n\nApple Support",
+      "isPhishing": true,
+      "explanation": "This is phishing. Apple's real domain is apple.com or icloud.com, not icloud-support-center.com. Real iCloud storage warnings appear on your Apple devices in Settings, not as emails with external payment links. The 'data loss' threat is fearmongering.",
+      "redFlags": ["Fake domain (icloud-support-center.com)", "Threat of data loss", "External payment link", "Real iCloud warnings appear in device Settings"]
+    },
+    {
+      "id": "email_025",
+      "category": "Email Scams",
+      "from": "no-reply@accounts.google.com",
+      "subject": "Your Google verification code is 482917",
+      "body": "Google\n\n482917 is your Google verification code.\n\nDon't share this code with anyone. Google will never ask for it.\n\nIf you didn't request this code, someone may be trying to access your account. Visit myaccount.google.com to secure it.\n\n— Google",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Google 2-factor verification code. The sender is @accounts.google.com (a real Google domain), the message is short and factual, contains no clickable suspicious links, and explicitly warns you not to share the code. Real codes look like this.",
+      "redFlags": []
+    }
+  ]
+}

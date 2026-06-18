@@ -1,0 +1,255 @@
+
+{
+  "scenarios": [
+    {
+      "id": "univ_001",
+      "category": "University",
+      "from": "bursar@yourschool-billing.com",
+      "subject": "OVERDUE: Tuition payment of $4,250 — Hold placed on your account",
+      "body": "Dear Student,\n\nOur records show your Spring 2026 tuition balance of $4,250 is overdue.\n\nA registration hold has been placed on your account. You will be unable to register for Fall classes until paid.\n\nPay Now → http://yourschool-billing.com/pay\n\nAvoid late fees by paying within 48 hours.\n\nOffice of the Bursar",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real universities use their own .edu domains for billing, not generic '.com' addresses like 'yourschool-billing.com'. Real tuition payments are made through your student portal (which you access by logging in to the school's website directly), not via emailed links.",
+      "redFlags": ["Non-.edu domain (yourschool-billing.com)", "Registration hold scare tactic", "External payment link", "48-hour deadline pressure"]
+    },
+    {
+      "id": "univ_002",
+      "category": "University",
+      "from": "library@yourschool.edu",
+      "subject": "Library book due reminder: 'Introduction to Algorithms'",
+      "body": "Hi,\n\nYour library book 'Introduction to Algorithms' is due in 3 days (June 17, 2026).\n\nYou may renew online via the library portal or return it to any campus library branch.\n\nLate fees: $0.25 per day.\n\nUniversity Library",
+      "isPhishing": false,
+      "explanation": "This is a legitimate library reminder. The sender is @yourschool.edu (the real university domain), the message is factual and non-urgent, contains no clickable suspicious links, and the small late-fee amount is realistic.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_003",
+      "category": "University",
+      "from": "fafsa-verify@studentaid-verify.gov.co",
+      "subject": "FAFSA Verification Required — Your aid may be canceled",
+      "body": "Dear Student,\n\nYour 2026-2027 FAFSA application requires additional verification.\n\nFailure to verify within 7 days will result in your financial aid being canceled.\n\nVerify Now → http://studentaid-verify.gov.co/verify\n\nYou will need your SSN and tax documents.\n\nFederal Student Aid",
+      "isPhishing": true,
+      "explanation": "This is phishing. The real Federal Student Aid domain is studentaid.gov, not 'studentaid-verify.gov.co' (note the .gov.co — that's a Colombia country code, not the US government). The scam wants your SSN and tax info for identity theft.",
+      "redFlags": ["Fake government domain (.gov.co is not US government)", "Asks for SSN via external link", "Threat of aid cancellation", "Real FAFSA verification happens at studentaid.gov"]
+    },
+    {
+      "id": "univ_004",
+      "category": "University",
+      "from": "it-help@yourschool-it-support.com",
+      "subject": "Your student account will be locked in 24 hours",
+      "body": "Dear User,\n\nYour student email account has not been verified in the last 90 days.\n\nVerify now to avoid account lock:\n\nVerify Account → http://yourschool-it-support.com/verify\n\nLocked accounts lose access to email, Canvas, and the library portal.\n\nIT Help Desk",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real university IT uses .edu domains. Universities don't lock accounts for not 'verifying' them every 90 days. The link is a credential-stealing page designed to look like your school's login portal.",
+      "redFlags": ["Non-.edu domain (yourschool-it-support.com)", "Fake 90-day verification requirement", "Threat of locked account", "External login link"]
+    },
+    {
+      "id": "univ_005",
+      "category": "University",
+      "from": "registrar@yourschool.edu",
+      "subject": "Your Fall 2026 class schedule is now available",
+      "body": "Hi,\n\nYour Fall 2026 class schedule is now available in the student portal.\n\nClasses:\n• CS 380 — Computer Networks\n• MATH 250 — Linear Algebra\n• ENGL 220 — Modern Literature\n\nLog in to the student portal at yourschool.edu to view full details.\n\nOffice of the Registrar",
+      "isPhishing": false,
+      "explanation": "This is a legitimate registrar notification. The sender is @yourschool.edu (the real university domain), provides factual schedule info, and directs you to log in to the student portal directly without external links.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_006",
+      "category": "University",
+      "from": "awards@scholarship-foundation.net",
+      "subject": "You have been awarded a $5,000 scholarship — Claim today",
+      "body": "Congratulations!\n\nBased on your academic profile, you have been selected for a $5,000 scholarship.\n\nTo claim, provide:\n• SSN for tax reporting\n• Bank account for direct deposit\n• Copy of student ID\n\nClaim Scholarship → http://scholarship-foundation.net/claim\n\nThis award expires in 72 hours.\n\nScholarship Foundation",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real scholarships don't appear out of nowhere with 72-hour deadlines and SSN requests. The 'foundation' is fake; the goal is identity theft and bank account theft. Real scholarships go through your school's financial aid office, not unknown websites.",
+      "redFlags": ["Unsolicited scholarship offer", "Requests SSN and bank info", "72-hour deadline", "Fake foundation domain", "Real scholarships go through financial aid"]
+    },
+    {
+      "id": "univ_007",
+      "category": "University",
+      "from": "jsmith@yourschool-prof.com",
+      "subject": "FINAL EXAM ANSWERS — for my CS 380 students only",
+      "body": "Hi class,\n\nI have shared the final exam answers as a study guide for my CS 380 students.\n\nDownload Answers → http://yourschool-prof.com/cs380-answers.zip\n\nKeep this confidential.\n\nProf. Smith",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real professors use @yourschool.edu addresses, not random '.com' domains. No professor sends 'exam answers' as a study aid — this scam plays on the temptation to cheat. The download link almost certainly contains malware.",
+      "redFlags": ["Non-.edu domain (yourschool-prof.com)", "Temptation bait (free answers)", "Suspicious .zip download", "No real professor distributes exam answers"]
+    },
+    {
+      "id": "univ_008",
+      "category": "University",
+      "from": "registrar@yourschool.edu",
+      "subject": "Course registration opens June 20 at 8:00 AM",
+      "body": "Hi,\n\nCourse registration for Fall 2026 opens on Monday, June 20 at 8:00 AM.\n\nYour registration time: 8:00 AM (priority registration based on credit hours).\n\nLog in to the student portal at yourschool.edu to register.\n\nOffice of the Registrar",
+      "isPhishing": false,
+      "explanation": "This is a legitimate registration announcement. The sender is @yourschool.edu (the real university domain), the information is factual, and the directive is to use the student portal — no clickable suspicious links.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_009",
+      "category": "University",
+      "from": "parking-fines@campus-parking-services.com",
+      "subject": "Unpaid parking citation: $85 — Vehicle may be booted",
+      "body": "Dear Student,\n\nA parking citation issued on June 10, 2026 remains unpaid.\n\nCitation #: PK-2026-9824\nAmount: $85.00\n\nIf not paid in 7 days, your vehicle will be booted and a $200 fee added.\n\nPay Citation → http://campus-parking-services.com/pay\n\nCampus Parking Services",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real campus parking systems use .edu domains or known university vendor portals. The 'boot threat' is meant to scare you into paying without verifying. Real citations are also visible on the actual parking portal you've used before.",
+      "redFlags": ["Non-.edu domain (campus-parking-services.com)", "Boot/penalty threat", "External payment link", "Generic 'Dear Student' greeting"]
+    },
+    {
+      "id": "univ_010",
+      "category": "University",
+      "from": "health@yourschool-health-services.com",
+      "subject": "Your COVID-19 vaccination record has expired — Update required",
+      "body": "Dear Student,\n\nOur records show your COVID-19 vaccination has expired.\n\nUpload your updated vaccination record within 5 days or your registration will be suspended:\n\nUpload Record → http://yourschool-health-services.com/upload\n\nStudent Health Services",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real student health uses .edu domains. Vaccination records don't 'expire' in this generic way, and real schools provide multiple ways to update health records — never just an external upload link from a non-.edu domain.",
+      "redFlags": ["Non-.edu domain (yourschool-health-services.com)", "Threat of registration suspension", "External upload link", "Health info uploaded to unknown domain"]
+    },
+    {
+      "id": "univ_011",
+      "category": "University",
+      "from": "careers@yourschool.edu",
+      "subject": "Career Fair on June 25 — Register now",
+      "body": "Hi,\n\nThe Career Center's Spring Career Fair is on June 25, 2026 from 10 AM - 3 PM in the Main Hall.\n\n50+ companies attending including Google, Stripe, and Salesforce.\n\nRegister and view the company list at yourschool.edu/careers.\n\nCareer Center",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Career Center announcement. The sender is @yourschool.edu (the real university domain), provides factual event details, and directs you to the official university page without external links.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_012",
+      "category": "University",
+      "from": "alumni-fund@yourschool-alumni.org",
+      "subject": "Final reminder: Honor your alma mater with a small donation",
+      "body": "Dear Alumnus,\n\nWe haven't received your annual alumni donation this year.\n\nEven a small gift of $50 helps current students:\n\nDonate Now → http://yourschool-alumni.org/donate\n\nWe accept credit card, Bitcoin, and wire transfer.\n\nAlumni Relations",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real alumni fundraising uses .edu domains. Accepting 'Bitcoin' as a donation method for a university is a major red flag. The scam targets recent grads with guilt-based language and a fake donation page that steals card details.",
+      "redFlags": ["Non-.edu alumni domain", "Bitcoin payment option (unusual for legit charity)", "Guilt-based language ('honor your alma mater')", "External payment link"]
+    },
+    {
+      "id": "univ_013",
+      "category": "University",
+      "from": "jobs@campus-employment-portal.com",
+      "subject": "Easy on-campus job: $25/hour — No experience needed",
+      "body": "Hi,\n\nWe have an immediate on-campus opening:\n\nPosition: Personal Assistant\nPay: $25/hour, 5 hours/week\nDuties: Buy supplies for a busy professor\n\nTo start, you'll receive a check to deposit, then send funds to a vendor.\n\nApply Now → http://campus-employment-portal.com/apply\n\nCampus Jobs",
+      "isPhishing": true,
+      "explanation": "This is a classic 'fake check' scam targeting students. They send you a fake check, you deposit it, send 'vendor' money from your real account, and the original check bounces — leaving you on the hook. Real campus jobs are posted through your school's career portal at .edu domains.",
+      "redFlags": ["Non-.edu domain (campus-employment-portal.com)", "Unrealistic pay for minimal work", "Check-deposit-then-send pattern (classic fake check scam)", "No experience required as bait"]
+    },
+    {
+      "id": "univ_014",
+      "category": "University",
+      "from": "prof.chen@yourschool.edu",
+      "subject": "Research opportunity in my lab — Summer 2026",
+      "body": "Hi,\n\nI saw your strong performance in CS 240 and wanted to reach out about a summer research opportunity in my lab.\n\nWe're studying distributed systems and looking for one undergraduate research assistant.\n\nIf interested, reply with your availability and we can chat during office hours.\n\nProf. Chen",
+      "isPhishing": false,
+      "explanation": "This is a legitimate research opportunity from a professor. The sender is @yourschool.edu (the real university domain), the message is conversational and references specific coursework, and asks you to reply via email — no external links or payment requests.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_015",
+      "category": "University",
+      "from": "transcripts@official-transcripts.net",
+      "subject": "Action Required: Verify your transcript request",
+      "body": "Hello,\n\nWe received your request for an official transcript. To complete the request, please verify your identity and pay the $15 processing fee:\n\nVerify & Pay → http://official-transcripts.net/verify\n\nUnverified requests are canceled in 5 days.\n\nOfficial Transcripts",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real transcript requests go through your university's registrar portal (or a known vendor like Parchment that the school links from its own site). The 'verify and pay' link with a small fee is the classic phishing pattern — small charge to bypass suspicion.",
+      "redFlags": ["Non-.edu domain (official-transcripts.net)", "Small fee to bypass suspicion", "5-day deadline pressure", "Triggered without you actually requesting a transcript"]
+    },
+    {
+      "id": "univ_016",
+      "category": "University",
+      "from": "zoom-meeting@zoom-meetings-invite.com",
+      "subject": "Prof. Lee invited you to a Zoom meeting: Office Hours",
+      "body": "Prof. Lee has invited you to a Zoom meeting.\n\nTopic: Office Hours\nTime: June 15, 2026 4:00 PM EST\n\nJoin Meeting → http://zoom-meetings-invite.com/join/8472\n\nPassword required at join.\n\nZoom",
+      "isPhishing": true,
+      "explanation": "This is phishing. Zoom's real domains are zoom.us and zoom.com — not zoom-meetings-invite.com. Real Zoom invites also link to specific meeting URLs on zoom.us. The 'password required' is a credential-stealing trap.",
+      "redFlags": ["Fake Zoom-look-alike domain", "Real Zoom uses zoom.us", "Credential-stealing 'password' page", "Generic invite without specific meeting URL"]
+    },
+    {
+      "id": "univ_017",
+      "category": "University",
+      "from": "prof.kim@yourschool.edu",
+      "subject": "Office hours change for next week",
+      "body": "Hi class,\n\nMy office hours next week are moved:\n\nNew time: Tuesday 2-4 PM (instead of Wednesday)\nLocation: Same — room 314, Math building\n\nSee you there.\n\nProf. Kim",
+      "isPhishing": false,
+      "explanation": "This is a legitimate office-hours update. The sender is @yourschool.edu (the real university domain), the message is conversational, contains no suspicious links, and the content matches normal professor communication.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_018",
+      "category": "University",
+      "from": "hr@yourschool-internships.com",
+      "subject": "Internship offer: $30/hour at Goldman Sachs — Apply now",
+      "body": "Dear Student,\n\nYou have been pre-selected for a paid summer internship:\n\nCompany: Goldman Sachs\nPay: $30/hour\nDuration: 10 weeks\n\nTo accept, complete the application and pay the $50 background check fee:\n\nAccept Offer → http://yourschool-internships.com/accept\n\nOnly 5 spots remaining.\n\nUniversity Internship Office",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real internships never require applicants to pay an upfront 'background check' fee. The fake scarcity ('only 5 spots') and big company name are bait. Real internship offers come through your school's career services on a .edu domain.",
+      "redFlags": ["Non-.edu domain", "Upfront 'background check' fee (always a scam)", "Big-name company as bait", "Fake scarcity", "Unsolicited 'pre-selection'"]
+    },
+    {
+      "id": "univ_019",
+      "category": "University",
+      "from": "housing@yourschool-housing-office.com",
+      "subject": "Secure your dorm with a $300 deposit — Fall 2026",
+      "body": "Hi,\n\nDorm assignments for Fall 2026 are filling up quickly. Secure your spot with a $300 deposit:\n\nPay Deposit → http://yourschool-housing-office.com/deposit\n\nDeposits will be applied to your tuition. Pay via credit card or Venmo.\n\nHousing Office",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real housing offices use .edu domains. Accepting Venmo for university deposits is unusual and a sign of a scam — real schools use their official student portal. The urgency and external payment link are classic phishing patterns.",
+      "redFlags": ["Non-.edu domain (yourschool-housing-office.com)", "Venmo payment unusual for school deposits", "Urgency ('filling up quickly')", "External payment link"]
+    },
+    {
+      "id": "univ_020",
+      "category": "University",
+      "from": "housing@yourschool.edu",
+      "subject": "Spring move-out: Important dates and checklist",
+      "body": "Hi,\n\nSpring 2026 move-out is approaching. Key info:\n\n• Move-out deadline: May 15, 2026, 5 PM\n• Room inspections: May 14-15\n• Key return: At RA office\n\nFull checklist at yourschool.edu/housing/move-out.\n\nHousing Office",
+      "isPhishing": false,
+      "explanation": "This is a legitimate housing announcement. The sender is @yourschool.edu (the real university domain), provides factual move-out info, contains no clickable suspicious links, and directs you to the official housing page.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_021",
+      "category": "University",
+      "from": "microsoft-education@office-students-reactivate.com",
+      "subject": "Your free Microsoft 365 for students has been deactivated",
+      "body": "Hello,\n\nYour free Microsoft 365 Education subscription has been deactivated because we couldn't verify your student status.\n\nReactivate Now → http://office-students-reactivate.com/reactivate\n\nYou will be asked to confirm your student email login.\n\nMicrosoft Education",
+      "isPhishing": true,
+      "explanation": "This is phishing. Microsoft's real education domain is microsoft.com or office.com, not office-students-reactivate.com. The 'reactivate' page is a fake Microsoft login designed to steal your student email credentials — which often unlock many other school systems.",
+      "redFlags": ["Fake Microsoft domain", "Asks for student email login", "Fear of losing free software", "External reactivation link"]
+    },
+    {
+      "id": "univ_022",
+      "category": "University",
+      "from": "loanforgiveness@studentloans-forgiveness.com",
+      "subject": "You qualify for $20,000 in student loan forgiveness — Apply by Friday",
+      "body": "Dear Borrower,\n\nUnder the new federal program, you qualify for up to $20,000 in student loan forgiveness.\n\nTo apply, provide your SSN, FSA ID, and bank info:\n\nApply Now → http://studentloans-forgiveness.com/apply\n\nProgram closes Friday — apply today.\n\nStudent Loan Forgiveness Center",
+      "isPhishing": true,
+      "explanation": "This is phishing. Real federal loan forgiveness is applied for at studentaid.gov — a US government domain. Any service that requires your FSA ID and SSN through an external '.com' is harvesting credentials for identity theft. Real federal programs never charge fees or have weekend-only deadlines.",
+      "redFlags": ["Non-.gov domain (studentloans-forgiveness.com)", "Asks for SSN and FSA ID", "Artificial deadline", "Real loan forgiveness goes through studentaid.gov"]
+    },
+    {
+      "id": "univ_023",
+      "category": "University",
+      "from": "events@yourschool.edu",
+      "subject": "Speaker series: Dr. Hannah Liu on AI ethics, June 22",
+      "body": "Hi,\n\nJoin us for a speaker series event:\n\nDr. Hannah Liu (Stanford) on 'AI Ethics in 2026'\nWhen: Monday, June 22, 6:00 PM\nWhere: Wilson Auditorium\n\nFree and open to all students. RSVP at yourschool.edu/events.\n\nDepartment of Computer Science",
+      "isPhishing": false,
+      "explanation": "This is a legitimate event announcement. The sender is @yourschool.edu (the real university domain), provides factual event info, and directs you to the official events page — no suspicious links or personal info requests.",
+      "redFlags": []
+    },
+    {
+      "id": "univ_024",
+      "category": "University",
+      "from": "canvas-security@canvas-lms-security.net",
+      "subject": "Suspicious login to your Canvas account from another country",
+      "body": "Dear Student,\n\nWe detected a login attempt to your Canvas account from China.\n\nIf this was not you, secure your account immediately:\n\nSecure Canvas → http://canvas-lms-security.net/secure\n\nYour assignments and grades may be at risk.\n\nCanvas Security",
+      "isPhishing": true,
+      "explanation": "This is phishing. Canvas's real domain is instructure.com (the company that owns Canvas) or your school's .edu Canvas subdomain. The scary 'foreign country' login is meant to panic you. The 'secure account' link is a credential-stealing page.",
+      "redFlags": ["Fake Canvas domain (canvas-lms-security.net)", "Scary foreign-country login bait", "External 'secure' link", "Real Canvas logins are checked at instructure.com or your school's portal"]
+    },
+    {
+      "id": "univ_025",
+      "category": "University",
+      "from": "evaluations@yourschool.edu",
+      "subject": "End-of-semester course evaluations are open",
+      "body": "Hi,\n\nCourse evaluations for Spring 2026 are now open.\n\nYour feedback helps improve courses and faculty. Evaluations are anonymous.\n\nComplete evaluations at yourschool.edu/evaluations by May 10.\n\nThank you,\nOffice of Institutional Research",
+      "isPhishing": false,
+      "explanation": "This is a legitimate course evaluation reminder. The sender is @yourschool.edu (the real university domain), the message is factual, contains no clickable suspicious links, and directs you to the official evaluation page.",
+      "redFlags": []
+    }
+  ]
+}

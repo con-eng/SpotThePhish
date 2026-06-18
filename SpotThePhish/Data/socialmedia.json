@@ -1,0 +1,255 @@
+
+{
+  "scenarios": [
+    {
+      "id": "social_001",
+      "category": "Social Media",
+      "from": "security@instagram-support.com",
+      "subject": "Your Instagram Account Will Be Deleted in 24 Hours",
+      "body": "Dear User,\n\nYour Instagram account has been reported for violating our community guidelines.\n\nYour account will be permanently deleted in 24 hours unless you submit an appeal.\n\nAppeal Now → http://instagram-support.com/appeal\n\nYou must act immediately.\n\nInstagram Support Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. Instagram's real emails come from @mail.instagram.com or @instagram.com — not @instagram-support.com. The 24-hour deletion threat is designed to cause panic. Real Instagram appeals are handled directly inside the app, not through email links.",
+      "redFlags": ["Fake sender domain (@instagram-support.com)", "24-hour deletion threat", "Suspicious appeal link", "Real Instagram issues are handled inside the app"]
+    },
+    {
+      "id": "social_002",
+      "category": "Social Media",
+      "from": "security@facebookmail.com",
+      "subject": "You have a new login alert",
+      "body": "Hi,\n\nWe noticed a new login to your Facebook account from an unfamiliar device.\n\nTime: June 14, 2026 at 3:22 PM\nDevice: iPhone\nLocation: Austin, Texas\n\nIf this was you, no action is needed.\n\nIf you don't recognize this login, secure your account at facebook.com/security.\n\nThe Facebook Team",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Facebook security notification. Facebook uses the domain @facebookmail.com for automated alerts. The email directs you to facebook.com/security — not a suspicious link — and there are no threats or demands.",
+      "redFlags": []
+    },
+    {
+      "id": "social_003",
+      "category": "Social Media",
+      "from": "noreply@tiktok-creator-fund.com",
+      "subject": "You Have Been Selected for a Creator Fund Payment — $1,200",
+      "body": "Hello Creator,\n\nBased on your recent TikTok activity, you have been selected to receive a Creator Fund payment of $1,200.00.\n\nTo receive your payment, please verify your identity and provide payment details:\n\nClaim Now → http://tiktok-creator-fund.com/claim\n\nThis payment expires if not claimed within 48 hours.\n\nTikTok Creator Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. TikTok's real domain is tiktok.com — Creator Fund payments are managed inside the TikTok app, not through emails from tiktok-creator-fund.com. Any unexpected money offer asking you to provide payment information through a link is almost certainly a scam.",
+      "redFlags": ["Fake domain (tiktok-creator-fund.com)", "Unsolicited money offer", "Requests payment information via a link", "48-hour expiry to pressure you into acting"]
+    },
+    {
+      "id": "social_004",
+      "category": "Social Media",
+      "from": "info@x.com",
+      "subject": "Your account has been verified",
+      "body": "Hi,\n\nYour X account has been verified and you will receive a blue checkmark within 24 hours.\n\nThank you for subscribing to X Premium.\n\nX Support",
+      "isPhishing": false,
+      "explanation": "This is a legitimate X (formerly Twitter) notification. The sender is @x.com, there are no suspicious links, no requests for personal information, and the message is simple and factual. Verification confirmation emails like this are normal.",
+      "redFlags": []
+    },
+    {
+      "id": "social_005",
+      "category": "Social Media",
+      "from": "jobs@linkedln-careers.com",
+      "subject": "You Have 3 New Job Offers Waiting",
+      "body": "Dear Professional,\n\nYou have 3 new job offers from top companies waiting for you.\n\nSalaries range from $90,000 to $150,000.\n\nView Your Offers → http://linkedln-careers.com/offers\n\nThese offers expire in 24 hours.\n\nLinkedIn Jobs Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. The sender domain is 'linkedln-careers.com' — look closely and you will see 'linkedln' instead of 'linkedin'. The letters i and l have been swapped, which is very easy to miss. LinkedIn's real domain is linkedin.com and real job notifications come through the LinkedIn app.",
+      "redFlags": ["Misspelled domain: linkedln instead of linkedin", "Generic 'Dear Professional' greeting", "Suspicious external link", "24-hour expiry to pressure you", "LinkedIn sends job alerts through its own app"]
+    },
+    {
+      "id": "social_006",
+      "category": "Social Media",
+      "from": "copyright@youtube-strikes.com",
+      "subject": "Your YouTube channel received a copyright strike",
+      "body": "Hello Creator,\n\nYour video 'Summer Vlog 2026' has received a copyright strike.\n\nThree strikes will result in permanent channel termination, including all videos and earnings.\n\nDispute Strike → http://youtube-strikes.com/dispute\n\nYou have 7 days to respond.\n\nYouTube Copyright Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. YouTube's real domain is youtube.com, not youtube-strikes.com. Copyright strikes are handled in YouTube Studio, not through external links. This is a common scam targeting creators because the fear of losing a channel makes people click without thinking.",
+      "redFlags": ["Fake domain (youtube-strikes.com)", "Threat of channel termination", "External dispute link", "Real strikes appear in YouTube Studio"]
+    },
+    {
+      "id": "social_007",
+      "category": "Social Media",
+      "from": "no-reply@snapchat.com",
+      "subject": "You have a memory from 1 year ago today",
+      "body": "Hey,\n\nA Snapchat memory from 1 year ago today is ready to view.\n\nOpen Snapchat to see it.\n\nThis email was sent because you have memory notifications enabled. Change preferences in Settings → Notifications.\n\nSnapchat",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Snapchat memory notification. The sender is @snapchat.com (the real domain), it contains no suspicious links, and directs you to open the app you already have installed. Snapchat regularly sends memory notifications like this.",
+      "redFlags": []
+    },
+    {
+      "id": "social_008",
+      "category": "Social Media",
+      "from": "verification@x-premium-billing.com",
+      "subject": "Action required: Re-verify to keep your X blue check",
+      "body": "Hi,\n\nDue to a recent policy update, all verified accounts must re-verify within 48 hours or lose the blue checkmark.\n\nRe-verify → http://x-premium-billing.com/verify\n\nYou will be asked to confirm your X Premium payment method.\n\nX Verification Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. X's real domain is x.com, not x-premium-billing.com. Verification status is managed inside the X app or at x.com. The 'confirm payment' step is the trap — it goes to a fake form designed to steal card details.",
+      "redFlags": ["Fake domain (x-premium-billing.com)", "Re-verification pressure", "Asks to confirm payment details", "48-hour deadline"]
+    },
+    {
+      "id": "social_009",
+      "category": "Social Media",
+      "from": "reports@instagram-help.net",
+      "subject": "Your reel was reported for inappropriate content",
+      "body": "Dear @yourhandle,\n\nYour recent reel was reported by another user for inappropriate content.\n\nYour reel has been hidden from search results pending review.\n\nIf you believe this is a mistake, appeal here:\n\nAppeal → http://instagram-help.net/appeal\n\nYou have 24 hours to respond.\n\nInstagram Trust & Safety",
+      "isPhishing": true,
+      "explanation": "This is phishing. Instagram's real domain is instagram.com, not instagram-help.net. Real Instagram report notifications appear in the app under Settings → Help. The combination of vague accusation, urgency, and external link is a classic scam.",
+      "redFlags": ["Fake domain (instagram-help.net)", "Vague 'reported' accusation", "External appeal link", "24-hour deadline"]
+    },
+    {
+      "id": "social_010",
+      "category": "Social Media",
+      "from": "noreply@discord.com",
+      "subject": "alex_dev added you as a friend",
+      "body": "alex_dev wants to be your friend on Discord.\n\nOpen the Discord app to accept or decline.\n\nYou can manage your friend request notifications in Settings → Notifications.\n\nDiscord",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Discord friend request notification. The sender is @discord.com (the real domain), it contains no clickable links to verify, and directs you to use the Discord app. Discord routinely sends these when someone sends a friend request.",
+      "redFlags": []
+    },
+    {
+      "id": "social_011",
+      "category": "Social Media",
+      "from": "verify@whatsapp-security.com",
+      "subject": "Your WhatsApp will be deactivated — verify number now",
+      "body": "Hi,\n\nWe detected your WhatsApp account is at risk of deactivation due to inactivity.\n\nVerify your phone number to keep your account active:\n\nVerify Now → http://whatsapp-security.com/verify\n\nUnverified accounts will be deactivated in 24 hours.\n\nWhatsApp Security",
+      "isPhishing": true,
+      "explanation": "This is phishing. WhatsApp's real domain is whatsapp.com, not whatsapp-security.com. WhatsApp does not deactivate accounts for inactivity in this way and never asks users to verify via external web links. The goal is to steal your phone number and 6-digit verification code so attackers can hijack your account.",
+      "redFlags": ["Fake domain (whatsapp-security.com)", "Threat of deactivation", "External verification link", "Common WhatsApp account takeover pattern"]
+    },
+    {
+      "id": "social_012",
+      "category": "Social Media",
+      "from": "moderation@reddit-mods.net",
+      "subject": "Your Reddit account has been suspended pending review",
+      "body": "u/yourname,\n\nYour Reddit account has been suspended pending review of a rule violation.\n\nDuration: Permanent unless appealed\n\nAppeal Suspension → http://reddit-mods.net/appeal\n\nAdmins must receive your appeal within 72 hours.\n\nReddit Admin Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. Reddit's real domain is reddit.com, not reddit-mods.net. Real Reddit appeals are submitted at reddit.com/appeal or via reddit.com/contact. Real suspensions are visible in your account's mod-mail or notifications, not through external email links.",
+      "redFlags": ["Fake domain (reddit-mods.net)", "Threat of permanent suspension", "External appeal link", "72-hour deadline"]
+    },
+    {
+      "id": "social_013",
+      "category": "Social Media",
+      "from": "weekly@explore.pinterest.com",
+      "subject": "10 Pins you'll love this week",
+      "body": "Hi,\n\nHere are some Pin ideas we think you'll love this week, based on boards you follow.\n\nOpen Pinterest to explore.\n\nYou can unsubscribe from weekly digests in Settings → Email Preferences.\n\nPinterest",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Pinterest weekly digest. The sender is @explore.pinterest.com (a real Pinterest subdomain), contains no suspicious links, and directs you to the Pinterest app. These weekly digests are normal.",
+      "redFlags": []
+    },
+    {
+      "id": "social_014",
+      "category": "Social Media",
+      "from": "verify@instagram-blue-badge.com",
+      "subject": "Get verified on Instagram for just $4.99 — Limited time",
+      "body": "Hello,\n\nFor a limited time, you can apply for a verified blue badge on Instagram for just $4.99.\n\nApply with payment → http://instagram-blue-badge.com/apply\n\nOnly 100 spots remaining today.\n\nInstagram Verification",
+      "isPhishing": true,
+      "explanation": "This is phishing. Instagram verification is applied for inside the app under Settings — never via an external website. The 'limited spots' scarcity is fake. The form steals your card info and Instagram credentials.",
+      "redFlags": ["Fake domain (instagram-blue-badge.com)", "Verification only happens inside the app", "False scarcity ('100 spots')", "Requests payment for verification"]
+    },
+    {
+      "id": "social_015",
+      "category": "Social Media",
+      "from": "alerts@snapchat-notifications.net",
+      "subject": "Someone screenshotted your private snap",
+      "body": "Hey,\n\nA user just took a screenshot of a snap you sent privately.\n\nSee who → http://snapchat-notifications.net/view\n\nFor your safety, review your privacy settings.\n\nSnapchat",
+      "isPhishing": true,
+      "explanation": "This is phishing. Snapchat's real domain is snapchat.com, not snapchat-notifications.net. Screenshot notifications happen inside the Snapchat app itself, never as a clickable email link. The bait is curiosity — you want to know who took the screenshot.",
+      "redFlags": ["Fake domain (snapchat-notifications.net)", "Curiosity bait ('see who')", "Real screenshot alerts appear in-app", "Suspicious external link"]
+    },
+    {
+      "id": "social_016",
+      "category": "Social Media",
+      "from": "creator@youtube.com",
+      "subject": "Congrats — you hit 10,000 subscribers!",
+      "body": "Hi,\n\nCongrats — your channel just crossed 10,000 subscribers!\n\nMilestones like this unlock new features in YouTube Studio. Open the YouTube Studio app to see what's available.\n\n— The YouTube Team",
+      "isPhishing": false,
+      "explanation": "This is a legitimate YouTube milestone email. The sender is @youtube.com (the real domain), the message is congratulatory with no demands, contains no suspicious links, and directs you to YouTube Studio you already use.",
+      "redFlags": []
+    },
+    {
+      "id": "social_017",
+      "category": "Social Media",
+      "from": "trust-safety@tiktok-violation.com",
+      "subject": "TikTok: Your video was removed for copyright violation",
+      "body": "Hello,\n\nYour TikTok video '@yourhandle/2026-summer-trend' was removed for copyright violation.\n\nFurther violations will result in your account being banned.\n\nReview & Appeal → http://tiktok-violation.com/appeal\n\nYou have 48 hours.\n\nTikTok Trust & Safety",
+      "isPhishing": true,
+      "explanation": "This is phishing. TikTok's real domain is tiktok.com, not tiktok-violation.com. Real copyright notifications appear in the TikTok app under Inbox → System Notifications. The threat of account ban is fearmongering to make you click.",
+      "redFlags": ["Fake domain (tiktok-violation.com)", "Threat of account ban", "External appeal link", "Real notifications appear in-app"]
+    },
+    {
+      "id": "social_018",
+      "category": "Social Media",
+      "from": "buyer.notification@marketplace-fb-buyers.com",
+      "subject": "Interested buyer for your Facebook Marketplace listing",
+      "body": "Hi,\n\nA buyer is interested in your listing 'iPhone 14 Pro — $600'.\n\nThe buyer has agreed to pay via secure payment service. Confirm your bank routing and account number to receive payment:\n\nConfirm Payment Details → http://marketplace-fb-buyers.com/confirm\n\nThe buyer is waiting.\n\nMarketplace Buyer Services",
+      "isPhishing": true,
+      "explanation": "This is a Facebook Marketplace scam. Facebook's real domain is facebook.com. Real Marketplace messaging happens inside Messenger, not via emails asking for bank account info. Sellers never need to give their routing/account number to receive payment.",
+      "redFlags": ["Fake domain (marketplace-fb-buyers.com)", "Asks for bank routing and account number", "Real Marketplace messaging happens in app", "Pressure to act quickly"]
+    },
+    {
+      "id": "social_019",
+      "category": "Social Media",
+      "from": "invitations@linkedin.com",
+      "subject": "Priya Shah has accepted your invitation",
+      "body": "Hi,\n\nPriya Shah, Software Engineer at Stripe, has accepted your invitation.\n\nStart a conversation in the LinkedIn app.\n\nLinkedIn",
+      "isPhishing": false,
+      "explanation": "This is a legitimate LinkedIn notification. The sender is @linkedin.com (the real domain, with the correct spelling — note it's linkedin, not linkedln), it contains no clickable suspicious links, and directs you to use the LinkedIn app.",
+      "redFlags": []
+    },
+    {
+      "id": "social_020",
+      "category": "Social Media",
+      "from": "security@instagram-recover.com",
+      "subject": "Your Instagram account was accessed from a new device — secure it now",
+      "body": "Hi,\n\nYour Instagram account was just accessed from a new device:\n\nDevice: Samsung Galaxy S23\nLocation: Moscow, Russia\n\nIf this wasn't you, your account may be compromised.\n\nSecure Account → http://instagram-recover.com/secure\n\nInstagram Security",
+      "isPhishing": true,
+      "explanation": "This is phishing. Instagram's real domain is instagram.com, not instagram-recover.com. The scary-sounding 'Moscow, Russia' location is meant to panic you. Real Instagram security alerts appear in-app and at instagram.com — never through external 'recover' domains.",
+      "redFlags": ["Fake domain (instagram-recover.com)", "Scary foreign-country location", "External 'secure account' link", "Real alerts appear in-app"]
+    },
+    {
+      "id": "social_021",
+      "category": "Social Media",
+      "from": "payouts@twitch-creator-payouts.com",
+      "subject": "Your Twitch payout of $487.22 is ready",
+      "body": "Hi Streamer,\n\nYour Twitch payout of $487.22 is ready for transfer.\n\nVerify your payout method:\n\nClaim Payout → http://twitch-creator-payouts.com/claim\n\nUnclaimed payouts are forfeited after 30 days.\n\nTwitch Creator Payouts",
+      "isPhishing": true,
+      "explanation": "This is phishing. Twitch's real domain is twitch.tv, not twitch-creator-payouts.com. Real Twitch payouts are managed inside your Twitch dashboard under Settings → Payouts. The fake 'forfeit' deadline is pressure to make you click without thinking.",
+      "redFlags": ["Fake domain (twitch-creator-payouts.com)", "Forfeit deadline pressure", "External claim link", "Real payouts managed in Twitch dashboard"]
+    },
+    {
+      "id": "social_022",
+      "category": "Social Media",
+      "from": "weekly@tiktok.com",
+      "subject": "Your week on TikTok: 12 videos watched, 3 liked",
+      "body": "Hey,\n\nHere's your week on TikTok:\n\n• 12 videos watched\n• 3 liked\n• 1 shared\n\nOpen the app to see what's trending this week.\n\nTikTok",
+      "isPhishing": false,
+      "explanation": "This is a legitimate TikTok weekly recap. The sender is @tiktok.com (the real domain), contains only factual recap info, no suspicious links, and directs you to the TikTok app you already have.",
+      "redFlags": []
+    },
+    {
+      "id": "social_023",
+      "category": "Social Media",
+      "from": "billing@hulu-premium-services.com",
+      "subject": "Your Hulu subscription has been renewed — $79.99",
+      "body": "Hello,\n\nYour annual Hulu Premium subscription has been auto-renewed for $79.99.\n\nIf you did not authorize this charge, click below to request a refund:\n\nRequest Refund → http://hulu-premium-services.com/refund\n\nRefunds must be requested within 24 hours.\n\nHulu Billing",
+      "isPhishing": true,
+      "explanation": "This is phishing. Hulu's real domain is hulu.com, not hulu-premium-services.com. The scam plays on panic — recipients want to cancel the charge quickly without scrutinizing the email. The refund link goes to a fake form that steals card details.",
+      "redFlags": ["Fake domain (hulu-premium-services.com)", "Panic-based bait (unexpected charge)", "External refund link", "24-hour pressure"]
+    },
+    {
+      "id": "social_024",
+      "category": "Social Media",
+      "from": "tag@bereal-tags.com",
+      "subject": "Maya tagged you in her BeReal",
+      "body": "Maya tagged you in her BeReal today.\n\nSee BeReal → http://bereal-tags.com/view\n\nBeReal",
+      "isPhishing": true,
+      "explanation": "This is phishing. BeReal's real domain is bereal.com. Tag notifications appear inside the BeReal app, not through external links. The scam plays on FOMO and social curiosity to make you click.",
+      "redFlags": ["Fake domain (bereal-tags.com)", "Social curiosity bait", "External view link", "Real tags appear in-app"]
+    },
+    {
+      "id": "social_025",
+      "category": "Social Media",
+      "from": "no-reply@discord.com",
+      "subject": "You've received a 3-month Nitro gift from sam_t",
+      "body": "Hi,\n\nsam_t sent you a gift: 3 months of Discord Nitro.\n\nOpen Discord and head to your inbox to redeem within 48 hours.\n\nDiscord",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Discord gift notification. The sender is @discord.com (the real domain), contains no external links, and directs you to redeem inside the Discord app you already use. Real Nitro gifts work this way.",
+      "redFlags": []
+    }
+  ]
+}

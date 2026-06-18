@@ -2,16 +2,21 @@
 //  SpotThePhishApp.swift
 //  SpotThePhish
 //
-//  Created by Connor English on 6/14/26.
-//
 
 import SwiftUI
 
 @main
 struct SpotThePhishApp: App {
+
+    @State private var statisticsManager = StatisticsManager()
+    @State private var achievementManager = AchievementManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(statisticsManager)
+                .environment(achievementManager)
+                .preferredColorScheme(.dark)
         }
     }
 }

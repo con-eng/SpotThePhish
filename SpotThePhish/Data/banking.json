@@ -1,0 +1,255 @@
+
+{
+  "scenarios": [
+    {
+      "id": "bank_001",
+      "category": "Banking Scams",
+      "from": "security@chase-verify.com",
+      "subject": "⚠️ Urgent: Your Account Has Been Suspended",
+      "body": "Dear Valued Customer,\n\nWe have detected suspicious activity on your Chase account and have temporarily suspended it for your protection.\n\nTo restore access, please verify your identity immediately:\n\nVerify Account → http://chase-secure-login.net/verify\n\nThis link expires in 24 hours. Failure to verify will result in permanent account closure.\n\nChase Security Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. Chase's real emails come from @chase.com, not @chase-verify.com. The link goes to chase-secure-login.net — not chase.com. Real banks never threaten to permanently close your account if you don't click a link in an email.",
+      "redFlags": ["Fake sender domain (@chase-verify.com)", "Link goes to chase-secure-login.net, not chase.com", "Threatens permanent account closure", "Generic greeting 'Dear Valued Customer'"]
+    },
+    {
+      "id": "bank_002",
+      "category": "Banking Scams",
+      "from": "no-reply@bankofamerica.com",
+      "subject": "Your March Statement is Ready",
+      "body": "Hello,\n\nYour Bank of America statement for March 2026 is now available to view online.\n\nLog in at bankofamerica.com to view your statement.\n\nThank you for banking with us.\n\nBank of America",
+      "isPhishing": false,
+      "explanation": "This is a legitimate email. The sender is @bankofamerica.com (the real domain). It contains no suspicious links — it simply tells you to visit bankofamerica.com yourself. There is no urgency, no threats, and no request for personal information.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_003",
+      "category": "Banking Scams",
+      "from": "alerts@wellsfarg0.com",
+      "subject": "IMPORTANT: Confirm Your Wire Transfer of $2,500",
+      "body": "Dear Account Holder,\n\nA wire transfer of $2,500.00 has been initiated from your account.\n\nIf you did NOT authorize this, click below to cancel immediately:\n\nCANCEL TRANSFER → http://wellsfargo-cancel.com/stop\n\nYou have 30 minutes before the transfer is completed and cannot be reversed.\n\nWells Fargo Fraud Department",
+      "isPhishing": true,
+      "explanation": "This is phishing. The sender is wellsfarg0.com — the letter 'o' has been replaced with the number '0', which is easy to miss. The 30-minute countdown is designed to cause panic so you click without thinking. The link goes to wellsfargo-cancel.com, not wellsfargo.com.",
+      "redFlags": ["Misspelled domain: wellsfarg0.com (zero, not letter o)", "Fake cancellation link", "Extreme 30-minute deadline to cause panic", "Real wire disputes are handled by calling your bank directly"]
+    },
+    {
+      "id": "bank_004",
+      "category": "Banking Scams",
+      "from": "noreply@citibank-update.net",
+      "subject": "Your Citi Card Has Been Locked",
+      "body": "NOTICE: Your Citi credit card ending in 4821 has been locked.\n\nReason: Multiple failed login attempts.\n\nUnlock your card here:\nhttps://citibank-update.net/unlock\n\nYou will need to provide your card number, expiration date, and CVV to unlock.\n\nCiti Customer Service",
+      "isPhishing": true,
+      "explanation": "This is phishing. Citibank's real domain is citi.com or citibank.com — not citibank-update.net. More importantly, no legitimate bank will ever ask you to provide your CVV by email. The CVV exists specifically so it is never stored or requested this way.",
+      "redFlags": ["Fake domain (citibank-update.net)", "Requests CVV — banks never ask for this by email", "Suspicious unlock link", "Uses fear of a locked card to pressure you"]
+    },
+    {
+      "id": "bank_005",
+      "category": "Banking Scams",
+      "from": "support@paypal.com",
+      "subject": "Receipt for your payment to Netflix — $15.99",
+      "body": "Hi,\n\nYou sent a payment of $15.99 USD to Netflix.\n\nTransaction ID: 7GH29-38KD92\nDate: June 14, 2026\n\nIf you didn't authorize this payment, open a dispute at paypal.com/disputes.\n\nThanks,\nPayPal",
+      "isPhishing": false,
+      "explanation": "This is a legitimate PayPal receipt. The sender is @paypal.com, the amount is small and plausible, and it directs you to paypal.com/disputes rather than a suspicious link. PayPal regularly sends receipts like this for completed payments.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_006",
+      "category": "Banking Scams",
+      "from": "security-team@capitalone-alerts.com",
+      "subject": "Capital One: Unusual Activity Detected on Your Card",
+      "body": "Dear Customer,\n\nWe detected an unusual $899.00 purchase on your Capital One Quicksilver card at an electronics store in Florida.\n\nIf this wasn't you, click here to dispute:\n\nDISPUTE → http://capitalone-alerts.com/dispute-now\n\nYour card will be charged in 1 hour if no action is taken.\n\nCapital One Fraud Prevention",
+      "isPhishing": true,
+      "explanation": "This is phishing. Capital One's real domain is capitalone.com, not capitalone-alerts.com. Real fraud alerts don't give you a 1-hour deadline before charging your card — they hold the charge while they investigate. Always call the number on the back of your card to verify.",
+      "redFlags": ["Fake domain (capitalone-alerts.com)", "1-hour artificial deadline", "Suspicious dispute link", "Generic 'Dear Customer' greeting"]
+    },
+    {
+      "id": "bank_007",
+      "category": "Banking Scams",
+      "from": "venmo@venmo.com",
+      "subject": "Sarah paid you $25.00",
+      "body": "Sarah Mitchell paid you $25.00\n\nFor: Dinner last night 🍕\n\nView in app → venmo.com/account\n\nTransfer to bank: venmo.com/transfer\n\nVenmo",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Venmo payment notification. The sender is @venmo.com (the real domain), the amount and note are realistic for a casual payment, and the links go to venmo.com. Venmo regularly sends notifications like this when you receive money.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_008",
+      "category": "Banking Scams",
+      "from": "refunds@apple-pay-service.com",
+      "subject": "Your Apple Pay Refund of $349.99 is Ready",
+      "body": "Hello,\n\nA refund of $349.99 has been approved for your recent Apple Pay transaction.\n\nTo receive your refund, please confirm your card details:\n\nClaim Refund → http://apple-pay-service.com/refund\n\nProcessing time: 1-2 business days after confirmation.\n\nApple Pay Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. Apple's domain is apple.com — not apple-pay-service.com. Apple Pay refunds happen automatically through the original payment method without needing to re-enter card details. Scammers use 'refund' offers to trick you into giving up card information.",
+      "redFlags": ["Fake domain (apple-pay-service.com)", "Asks you to re-enter card details", "Unsolicited refund offer", "Refunds never require confirming card info"]
+    },
+    {
+      "id": "bank_009",
+      "category": "Banking Scams",
+      "from": "cashapp@cash-app-rewards.net",
+      "subject": "You qualify for a $750 government relief deposit",
+      "body": "Hello,\n\nBased on your Cash App activity, you have been pre-approved for a $750 economic relief deposit.\n\nTo claim, link your Cash App and verify identity:\n\nClaim Funds → http://cash-app-rewards.net/claim\n\nAll deposits must be claimed within 24 hours.\n\nCash App Rewards",
+      "isPhishing": true,
+      "explanation": "This is phishing. Cash App's real domain is cash.app, not cash-app-rewards.net. There is no government relief program that operates through Cash App pre-approvals. These scams trick you into linking your account so attackers can steal funds.",
+      "redFlags": ["Fake domain (cash-app-rewards.net)", "Unsolicited money offer", "Requests account linking", "Fake government program", "24-hour deadline"]
+    },
+    {
+      "id": "bank_010",
+      "category": "Banking Scams",
+      "from": "alerts@chase.com",
+      "subject": "Chase Alert: Payment received for credit card ending in 8821",
+      "body": "Hi,\n\nWe received your credit card payment of $245.00 on June 13, 2026.\n\nNew balance: $1,832.41\nNext payment due: July 8, 2026\n\nView details at chase.com or in the Chase Mobile app.\n\nChase",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Chase payment confirmation. The sender is @chase.com (the real domain), contains no suspicious links, and gives factual transaction information. Chase routinely sends payment confirmations like this.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_011",
+      "category": "Banking Scams",
+      "from": "irs-refund@hsbc-tax.com",
+      "subject": "HSBC: Your tax refund of $1,847 is ready for deposit",
+      "body": "Dear HSBC Customer,\n\nThe IRS has processed your tax refund of $1,847.00 and selected HSBC for deposit.\n\nConfirm your account number and routing number to receive your refund:\n\nVerify Deposit → http://hsbc-tax.com/refund\n\nDeposits must be confirmed within 48 hours.\n\nHSBC Tax Services",
+      "isPhishing": true,
+      "explanation": "This is phishing. HSBC's real domain is hsbc.com, not hsbc-tax.com. The IRS does not work with individual banks to process refunds, and refunds are deposited automatically to the account you provided on your tax return — no confirmation needed.",
+      "redFlags": ["Fake domain (hsbc-tax.com)", "Asks you to confirm account and routing numbers", "Fake IRS coordination story", "48-hour deadline"]
+    },
+    {
+      "id": "bank_012",
+      "category": "Banking Scams",
+      "from": "no-reply@zelle-verify.com",
+      "subject": "You received $500 via Zelle — Verify to deposit",
+      "body": "Good news!\n\nMichael Johnson sent you $500 via Zelle.\n\nTo accept this payment, verify your bank account:\n\nAccept Payment → http://zelle-verify.com/accept\n\nUnclaimed payments are returned after 14 days.\n\nZelle",
+      "isPhishing": true,
+      "explanation": "This is phishing. Zelle's real domain is zellepay.com. Real Zelle transfers deposit automatically into your account if you're already enrolled — there is no separate 'accept payment' link to click. Scammers use this 'free money' approach to get banking credentials.",
+      "redFlags": ["Fake domain (zelle-verify.com)", "Unsolicited large payment", "Asks to verify bank account", "Real Zelle deposits happen automatically"]
+    },
+    {
+      "id": "bank_013",
+      "category": "Banking Scams",
+      "from": "estatements@discover.com",
+      "subject": "Your Discover statement is now available",
+      "body": "Hello,\n\nYour Discover card statement closing June 12, 2026 is now available.\n\nBalance: $432.17\nMinimum payment: $35.00\nDue date: July 9, 2026\n\nLog in to discover.com to view your full statement.\n\nDiscover",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Discover statement notification. The sender is @discover.com (the real domain), the message contains no clickable suspicious links, and it directs you to log in to discover.com directly.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_014",
+      "category": "Banking Scams",
+      "from": "alerts@usbank-secure.com",
+      "subject": "Your U.S. Bank debit card has been compromised",
+      "body": "URGENT,\n\nYour U.S. Bank debit card has been involved in a data breach. To prevent unauthorized charges, we must verify your card details immediately.\n\nVerify Card → http://usbank-secure.com/verify\n\nWe will need:\n• Full card number\n• Expiration date\n• PIN\n\nFailure to verify within 12 hours will result in permanent card cancellation.\n\nU.S. Bank Fraud Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. U.S. Bank's real domain is usbank.com, not usbank-secure.com. No legitimate bank will ever ask for your PIN by email — your PIN is something only you should ever know. Banks block compromised cards automatically and send you a new one.",
+      "redFlags": ["Fake domain (usbank-secure.com)", "Asks for your PIN — never share this", "Asks for full card number via email", "Threatens permanent cancellation"]
+    },
+    {
+      "id": "bank_015",
+      "category": "Banking Scams",
+      "from": "support@crypto-investments-pro.com",
+      "subject": "Last chance: Lock in 12% guaranteed returns on Bitcoin",
+      "body": "Hi,\n\nOur exclusive crypto investment program is closing tonight at midnight.\n\nDeposit minimum $500 USD to receive guaranteed 12% monthly returns.\n\nDeposit now → http://crypto-investments-pro.com/deposit\n\nTestimonial: 'I made $50,000 in 3 months!' — John D.\n\nSecure your future today.\n\nCrypto Investments Pro",
+      "isPhishing": true,
+      "explanation": "This is a classic investment scam. No legitimate investment offers 'guaranteed' returns — all investments carry risk. Promises of unrealistic returns combined with deadline pressure and fake testimonials are hallmarks of Ponzi-style fraud.",
+      "redFlags": ["Promises guaranteed returns (no investment is guaranteed)", "Deadline pressure ('closing tonight')", "Unrealistic 12% monthly return", "Fake testimonial", "Unsolicited investment pitch"]
+    },
+    {
+      "id": "bank_016",
+      "category": "Banking Scams",
+      "from": "noreply@americanexpress.com",
+      "subject": "Your payment is due on June 30",
+      "body": "Hello,\n\nThis is a reminder that your American Express card payment is due on June 30, 2026.\n\nCurrent balance: $1,204.55\nMinimum due: $35.00\n\nSchedule a payment by logging in at americanexpress.com or in the Amex app.\n\nThank you for being a valued Card Member.\n\nAmerican Express",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Amex payment reminder. The sender is @americanexpress.com (the real domain), there are no suspicious links, and it provides factual account information without asking you to click anything urgent.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_017",
+      "category": "Banking Scams",
+      "from": "security@pnc-online-banking.com",
+      "subject": "PNC: Your online banking has been disabled",
+      "body": "Dear PNC Customer,\n\nDue to suspicious activity, your PNC online banking access has been disabled.\n\nTo re-enable access, please log in and verify your identity:\n\nRe-enable Access → http://pnc-online-banking.com/login\n\nYour account will be permanently locked in 24 hours if no action is taken.\n\nPNC Security",
+      "isPhishing": true,
+      "explanation": "This is phishing. PNC's real domain is pnc.com, not pnc-online-banking.com. The 'login' link leads to a fake page designed to steal your credentials. If your access were truly disabled, you would call the bank — not click a link in an email.",
+      "redFlags": ["Fake domain (pnc-online-banking.com)", "Suspicious login link", "24-hour lock threat", "Generic greeting"]
+    },
+    {
+      "id": "bank_018",
+      "category": "Banking Scams",
+      "from": "service@paypal-resolution.com",
+      "subject": "Your PayPal account has been limited",
+      "body": "Dear PayPal user,\n\nWe have placed a limitation on your account due to unusual activity.\n\nTo remove this limitation, log in and complete the resolution centre steps:\n\nResolve Now → http://paypal-resolution.com/resolve\n\nLimitations not resolved within 72 hours may result in account closure and held funds.\n\nPayPal Resolution Team",
+      "isPhishing": true,
+      "explanation": "This is phishing. PayPal's real domain is paypal.com, not paypal-resolution.com. PayPal does have a Resolution Center, but you access it by logging in to paypal.com directly. Scammers often impersonate this exact process to steal credentials.",
+      "redFlags": ["Fake domain (paypal-resolution.com)", "Threat of held funds", "72-hour deadline", "Login link goes to non-paypal.com domain"]
+    },
+    {
+      "id": "bank_019",
+      "category": "Banking Scams",
+      "from": "fraud@robinhood.com",
+      "subject": "We detected a sign-in from a new device",
+      "body": "Hi,\n\nWe noticed a new login to your Robinhood account.\n\nWhen: June 14, 2026, 10:32 AM\nDevice: Pixel 8 Pro\nLocation: Seattle, WA\n\nIf this was you, you can ignore this email. If not, secure your account at robinhood.com/security.\n\nRobinhood",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Robinhood security notification. The sender is @robinhood.com (the real domain), it provides factual device and location info, and directs you to log in via robinhood.com directly — no shady links.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_020",
+      "category": "Banking Scams",
+      "from": "loans@quickrefi-mortgage.com",
+      "subject": "Pre-approved: Refinance and save $487/month — Act today!",
+      "body": "Congratulations homeowner,\n\nYou are pre-approved to refinance your mortgage at a 2.1% rate. Save up to $487 per month.\n\nThis offer expires tonight at midnight.\n\nGet your new rate → http://quickrefi-mortgage.com/start\n\nNo credit check required to apply.\n\nQuickRefi Team",
+      "isPhishing": true,
+      "explanation": "This is a scam. Legitimate mortgage refinances always require a credit check and rates near 2.1% don't exist in 2026's market. Pressure tactics, unrealistic savings, and 'no credit check' are red flags. These scams collect personal info or upfront 'application fees'.",
+      "redFlags": ["Unrealistic rate (2.1%)", "'No credit check' is impossible for real refis", "Midnight deadline pressure", "Unsolicited pre-approval", "Unknown lender domain"]
+    },
+    {
+      "id": "bank_021",
+      "category": "Banking Scams",
+      "from": "irs-collections@treasury-tax-gov.com",
+      "subject": "IRS Final Notice: Levy on your bank account",
+      "body": "FINAL NOTICE,\n\nThe IRS has issued a levy against your bank account for unpaid taxes of $4,217.66.\n\nYour funds will be frozen in 48 hours unless payment is made.\n\nPay Now → http://treasury-tax-gov.com/pay\n\nAccepted: Bitcoin, gift cards, wire transfer.\n\nIRS Collections Department",
+      "isPhishing": true,
+      "explanation": "This is an IRS impersonation scam. The IRS never sends collection notices by email and never accepts payment in Bitcoin or gift cards. The IRS always sends paper notices through the U.S. mail first. The domain treasury-tax-gov.com is fake — the real IRS uses irs.gov.",
+      "redFlags": ["Fake government domain (treasury-tax-gov.com)", "IRS does not contact you by email", "Accepts gift cards or Bitcoin (never legitimate)", "48-hour deadline"]
+    },
+    {
+      "id": "bank_022",
+      "category": "Banking Scams",
+      "from": "no-reply@bankofamerica.com",
+      "subject": "Your weekly account summary",
+      "body": "Hello,\n\nHere is your weekly Bank of America summary for the week ending June 13, 2026.\n\nChecking balance: $3,421.89\nSavings balance: $12,090.04\nCredit card balance: $654.21\n\nLog in at bankofamerica.com for full details.\n\nBank of America",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Bank of America weekly summary. The sender is @bankofamerica.com (the real domain), provides only factual account balances, and contains no clickable suspicious links or requests for personal information.",
+      "redFlags": []
+    },
+    {
+      "id": "bank_023",
+      "category": "Banking Scams",
+      "from": "recovery@bitcoin-recovery-team.org",
+      "subject": "We can recover your stolen Bitcoin — Free consultation",
+      "body": "Hello,\n\nOur firm specializes in recovering stolen cryptocurrency. We saw your post about losing Bitcoin and want to help.\n\n95% success rate. We only charge a small upfront fee of $500 for blockchain analysis.\n\nStart Recovery → http://bitcoin-recovery-team.org/start\n\nRecover your funds today.\n\nBitcoin Recovery Team",
+      "isPhishing": true,
+      "explanation": "This is a 'recovery scam' that targets people who have already been scammed. Once cryptocurrency is sent, it cannot be reversed or recovered. Anyone claiming to recover it for an upfront fee is taking advantage of victims a second time.",
+      "redFlags": ["Crypto cannot be recovered after sending", "Upfront fee for service", "Unrealistic '95% success rate'", "Unsolicited contact about a private loss", "Fake company domain"]
+    },
+    {
+      "id": "bank_024",
+      "category": "Banking Scams",
+      "from": "alerts@usaa-secure-login.com",
+      "subject": "USAA: Suspicious login attempt blocked",
+      "body": "Dear USAA Member,\n\nWe blocked a sign-in attempt to your USAA account from an unknown device in Russia.\n\nIf this was not you, secure your account immediately:\n\nSecure Account → http://usaa-secure-login.com/secure\n\nYou must verify within 1 hour or your account may be compromised.\n\nUSAA Security",
+      "isPhishing": true,
+      "explanation": "This is phishing. USAA's real domain is usaa.com, not usaa-secure-login.com. Real USAA security alerts will tell you to log in to usaa.com directly or open the USAA app — not click a link to a different domain.",
+      "redFlags": ["Fake domain (usaa-secure-login.com)", "Suspicious 'secure account' link", "1-hour deadline", "Scary 'Russia' location to cause panic"]
+    },
+    {
+      "id": "bank_025",
+      "category": "Banking Scams",
+      "from": "notifications@robinhood.com",
+      "subject": "Your transfer of $200.00 has been completed",
+      "body": "Hi,\n\nYour transfer of $200.00 from Bank of America ****1234 to your Robinhood account is complete.\n\nFunds are now available to trade.\n\nView in app or at robinhood.com.\n\nRobinhood",
+      "isPhishing": false,
+      "explanation": "This is a legitimate Robinhood transfer confirmation. The sender is @robinhood.com (the real domain), it confirms a routine transfer with masked account details, and directs you to log in via robinhood.com without any urgent action required.",
+      "redFlags": []
+    }
+  ]
+}

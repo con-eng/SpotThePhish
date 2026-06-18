@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "A730CE6A-DEB7-4C35-B43A-E88DA69EFAF1",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SpotThePhish.xcodeproj",
+      "identifier" : "E4D4BE282FDE88A100258C7A",
+      "name" : "SpotThePhish"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SpotThePhish.xcodeproj",
+        "identifier" : "E4D4BE352FDE88A400258C7A",
+        "name" : "SpotThePhishTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SpotThePhish.xcodeproj",
+        "identifier" : "E4D4BE3F2FDE88A400258C7A",
+        "name" : "SpotThePhishUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
